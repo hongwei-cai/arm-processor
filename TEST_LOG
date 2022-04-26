@@ -1,12 +1,17 @@
 Testing files...
-	PASSED test: ALU add (with overflow) test
-	PASSED test: ALU arithmetic right shift test
-	PASSED test: ALU Control Basic Data-processing Instructions Test
-	PASSED test: ALU Control Shifts Test
-	PASSED test: ALU Control CMP Test
-	PASSED test: ALU Control B Test
-	PASSED test: ALU Control ldr/str Test
-	PASSED test: RegFile read/write test
-	PASSED test: RegFile PC test
-	PASSED test: RegFile debug outputs test
-Passed 10/10 tests
+Error in formatting of Logisim output (check ./mov-i.circ):
+	 you have a non-integer in this list: ['00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx']
+	FAILED test: MOV imm test (Error in the test)
+Error in formatting of Logisim output (check ./mov-add-reg.circ):
+	 you have a non-integer in this list: ['00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx']
+	FAILED test: MOV ADD register test (Error in the test)
+Error in formatting of Logisim output (check ./mov-add-i.circ):
+	 you have a non-integer in this list: ['00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx']
+	FAILED test: MOV ADD imm test (Error in the test)
+Error in formatting of Logisim output (check ./cond-add.circ):
+	 you have a non-integer in this list: ['00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', '00000000000000000000000000000001']
+	FAILED test: CMP for conditional adds test (Error in the test)
+Error in formatting of Logisim output (check ./branch-forward.circ):
+	 you have a non-integer in this list: ['00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx']
+	FAILED test: B forward test (Error in the test)
+Passed 0/5 tests
