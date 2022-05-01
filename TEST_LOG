@@ -1,51 +1,17 @@
 Testing files...
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a0000f
-0	0	0	0	0	0	0	e3a0000f
-0	0	0	0	0	1	0	e3a0000f
-f	0	0	0	0	1	4	0
-	FAILED test: MOV imm test (Did not match expected output (check ./mov-i.circ, also check test.py if this is a test you wrote))
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	1	0	e3a00001
-1	0	0	0	0	1	4	e3a01002
-0	0	0	0	0	2	0	e3a00001
-1	2	0	0	0	2	8	e0802001
-0	0	0	0	0	3	0	e3a00001
-1	2	3	0	0	3	c	0
-	FAILED test: MOV ADD register test (Did not match expected output (check ./mov-add-reg.circ, also check test.py if this is a test you wrote))
-Error in formatting of Logisim output (check ./mov-add-i.circ):
-	 you have a non-integer in this list: ['00000000000000000000000000000000', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000000', '00000000000000000000000000000001', '00000000000000000000000000000000', '11100011101000000001000000000011']
-	FAILED test: MOV ADD imm test (Error in the test)
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step
-0	0	0	0	0	0
-0	0	0	0	0	0
-0	0	0	0	0	1
-b	0	0	0	0	1
-0	0	0	0	0	2
-b	16	0	0	0	2
-0	0	0	0	0	3
-b	16	0	0	0	3
-0	0	0	0	0	4
-16	16	0	0	0	4
-0	0	0	0	0	5
-16	16	0	0	0	5
-0	0	0	0	0	6
-2c	16	0	0	0	6
-	FAILED test: CMP for conditional adds test (Did not match expected output (check ./cond-add.circ, also check test.py if this is a test you wrote))
+	PASSED test: MOV imm test
+	PASSED test: MOV ADD register test
+	PASSED test: MOV ADD imm test
+	PASSED test: CMP for conditional adds test
 Format is student then expected
 R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
 0	0	0	0	0	0	0	ea000001
 0	0	0	0	0	0	0	ea000001
-0	0	0	0	0	1	0	ea000001
+0	0	0	0	0	1	1	ea000001
 0	0	0	0	0	1	c	e3a0201e
-0	0	0	0	0	2	0	ea000001
+0	0	0	0	0	2	9	e3a01014
 0	0	1e	0	0	2	10	e3a00028
-0	0	0	0	0	3	0	ea000001
+0	14	0	0	0	3	d	e3a0201e
 28	0	1e	0	0	3	14	0
 	FAILED test: B forward test (Did not match expected output (check ./branch-forward.circ, also check test.py if this is a test you wrote))
-Passed 0/5 tests
+Passed 4/5 tests
