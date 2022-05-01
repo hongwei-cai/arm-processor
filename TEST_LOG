@@ -3,15 +3,5 @@ Testing files...
 	PASSED test: MOV ADD register test
 	PASSED test: MOV ADD imm test
 	PASSED test: CMP for conditional adds test
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	ea000001
-0	0	0	0	0	0	0	ea000001
-0	0	0	0	0	1	1	ea000001
-0	0	0	0	0	1	c	e3a0201e
-0	0	0	0	0	2	9	e3a01014
-0	0	1e	0	0	2	10	e3a00028
-0	14	0	0	0	3	d	e3a0201e
-28	0	1e	0	0	3	14	0
-	FAILED test: B forward test (Did not match expected output (check ./branch-forward.circ, also check test.py if this is a test you wrote))
-Passed 4/5 tests
+	PASSED test: B forward test
+Passed 5/5 tests
