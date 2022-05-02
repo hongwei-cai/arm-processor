@@ -27,6 +27,8 @@ fffffffe	0	0	0	0	3	c	e1a020a0
 fffffffe	0	3	0	0	4	10	0
 -2	0	3	0	0	4	10	0
 	FAILED test: MOV LSR test (Did not match expected output (check ./mov-lsr.circ, also check test.py if this is a test you wrote))
+	PASSED test: MOV ORR imm test
+	PASSED test: MOV EOR imm test
 	PASSED test: CMP for conditional adds test
 	PASSED test: B forward test
-Passed 6/8 tests
+Passed 8/10 tests
