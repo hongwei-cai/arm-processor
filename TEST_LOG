@@ -2,33 +2,11 @@ Testing files...
 	PASSED test: MOV imm test
 	PASSED test: MOV ADD register test
 	PASSED test: MOV ADD imm test
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	0	0	e3a00001
-1	0	0	0	0	1	4	e3a01002
-1	0	0	0	0	1	4	e3a01002
-1	2	0	0	0	2	8	e0402001
-1	2	0	0	0	2	8	e0402001
-1	2	ffffffff	0	0	3	c	0
-1	2	-1	0	0	3	c	0
-	FAILED test: MOV SUB register test (Did not match expected output (check ./mov-sub-reg.circ, also check test.py if this is a test you wrote))
+	PASSED test: MOV SUB register test
 	PASSED test: MOV LSL test
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	0	0	e3a00001
-1	0	0	0	0	1	4	e1a01020
-1	0	0	0	0	1	4	e1a01020
-1	0	0	0	0	2	8	e3e00003
-1	0	0	0	0	2	8	e3e00003
-fffffffe	0	0	0	0	3	c	e1a020a0
--2	0	0	0	0	3	c	e1a020a0
-fffffffe	0	3	0	0	4	10	0
--2	0	3	0	0	4	10	0
-	FAILED test: MOV LSR test (Did not match expected output (check ./mov-lsr.circ, also check test.py if this is a test you wrote))
+	PASSED test: MOV LSR test
 	PASSED test: MOV ORR imm test
 	PASSED test: MOV EOR imm test
 	PASSED test: CMP for conditional adds test
 	PASSED test: B forward test
-Passed 8/10 tests
+Passed 10/10 tests
