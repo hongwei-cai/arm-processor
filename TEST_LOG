@@ -22,4 +22,5 @@ Testing files...
 	PASSED test: B backward test
 	PASSED test: Load Register test
 	PASSED test: Store Register test
-Passed 23/23 tests
+	PASSED test: Data-processing ROT test
+Passed 24/24 tests
