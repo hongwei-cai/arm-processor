@@ -1,22 +1,18 @@
 Testing files...
-	PASSED test: MOV imm test
-	PASSED test: MOV ADD register test
-	PASSED test: MOV ADD imm test
-	PASSED test: MOV SUB register test
-	PASSED test: MOV SUB imm test
-	PASSED test: MOV LSL test
-	PASSED test: MOV LSR test
-	PASSED test: MOV ASR test
-	PASSED test: MOV AND imm test
-	PASSED test: MOV ORR imm test
-	PASSED test: MOV EOR imm test
-	PASSED test: MOV MVN test
-	PASSED test: CMP for conditional adds test
-	PASSED test: CMP for conditional adds-subs test
-	PASSED test: CMP register test
-	PASSED test: CMP imm test
-	PASSED test: B forward test
-	PASSED test: B backward test
-	PASSED test: Load Register test
-	PASSED test: Store Register test
-Passed 20/20 tests
+	PASSED test: ALU and test
+	PASSED test: ALU or test
+	PASSED test: ALU not test
+	PASSED test: ALU logical left shift test
+	PASSED test: ALU logical right shift test
+	PASSED test: ALU arithmetic right shift test
+	PASSED test: ALU add (with overflow) test
+	PASSED test: ALU sub (with overflow) test
+	PASSED test: ALU Control Basic Data-processing Instructions Test
+	PASSED test: ALU Control Shifts Test
+	PASSED test: ALU Control CMP Test
+	PASSED test: ALU Control B Test
+	PASSED test: ALU Control ldr/str Test
+	PASSED test: RegFile read/write test
+	PASSED test: RegFile PC test
+	PASSED test: RegFile debug outputs test
+Passed 16/16 tests
