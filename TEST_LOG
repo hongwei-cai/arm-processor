@@ -46,7 +46,13 @@ R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	In
 	PASSED test: MOV AND imm test
 	PASSED test: MOV ORR imm test
 	PASSED test: MOV EOR imm test
+	PASSED test: MOV MVN test
 	PASSED test: CMP for conditional adds test
+	PASSED test: CMP for conditional adds-subs test
+	PASSED test: CMP register test
+	PASSED test: CMP imm test
 	PASSED test: B forward test
 	PASSED test: B backward test
-Passed 11/14 tests
+	PASSED test: Load Register test
+	PASSED test: Store Register test
+Passed 17/20 tests

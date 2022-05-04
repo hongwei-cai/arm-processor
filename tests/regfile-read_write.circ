@@ -19,8 +19,8 @@
       <a name="radix" val="16"/>
     </tool>
     <tool name="Tunnel">
-      <a name="width" val="2"/>
-      <a name="label" val="WriteReg"/>
+      <a name="width" val="32"/>
+      <a name="label" val="R0 Value"/>
     </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
@@ -29,10 +29,16 @@
       <a name="facing" val="north"/>
     </tool>
     <tool name="Constant">
+      <a name="width" val="4"/>
       <a name="value" val="0x0"/>
     </tool>
   </lib>
-  <lib desc="#Gates" name="1"/>
+  <lib desc="#Gates" name="1">
+    <tool name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </tool>
+  </lib>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
       <a name="width" val="32"/>
@@ -113,7 +119,6 @@
     <wire from="(530,170)" to="(530,190)"/>
     <wire from="(630,130)" to="(630,170)"/>
     <wire from="(630,250)" to="(630,290)"/>
-    <wire from="(430,150)" to="(460,150)"/>
     <wire from="(100,490)" to="(100,590)"/>
     <wire from="(630,290)" to="(660,290)"/>
     <wire from="(70,220)" to="(90,220)"/>
@@ -121,6 +126,7 @@
     <wire from="(540,250)" to="(630,250)"/>
     <wire from="(520,100)" to="(520,140)"/>
     <wire from="(510,150)" to="(510,190)"/>
+    <wire from="(470,150)" to="(470,190)"/>
     <wire from="(250,490)" to="(260,490)"/>
     <wire from="(250,590)" to="(260,590)"/>
     <wire from="(90,170)" to="(90,220)"/>
@@ -135,14 +141,13 @@
     <wire from="(100,400)" to="(110,400)"/>
     <wire from="(340,100)" to="(340,160)"/>
     <wire from="(20,100)" to="(150,100)"/>
-    <wire from="(440,330)" to="(440,350)"/>
     <wire from="(50,240)" to="(50,390)"/>
     <wire from="(570,200)" to="(570,230)"/>
     <wire from="(340,160)" to="(450,160)"/>
     <wire from="(450,160)" to="(450,190)"/>
     <wire from="(100,220)" to="(100,310)"/>
     <wire from="(100,400)" to="(100,490)"/>
-    <wire from="(440,330)" to="(470,330)"/>
+    <wire from="(430,150)" to="(470,150)"/>
     <wire from="(490,140)" to="(520,140)"/>
     <wire from="(90,170)" to="(180,170)"/>
     <wire from="(180,90)" to="(180,130)"/>
@@ -152,10 +157,10 @@
     <wire from="(540,230)" to="(570,230)"/>
     <wire from="(20,220)" to="(40,220)"/>
     <wire from="(30,390)" to="(50,390)"/>
-    <wire from="(460,150)" to="(460,190)"/>
     <wire from="(420,270)" to="(430,270)"/>
-    <wire from="(440,350)" to="(450,350)"/>
-    <wire from="(460,190)" to="(470,190)"/>
+    <wire from="(420,250)" to="(430,250)"/>
+    <wire from="(420,210)" to="(430,210)"/>
+    <wire from="(420,230)" to="(430,230)"/>
     <wire from="(630,130)" to="(700,130)"/>
     <wire from="(430,100)" to="(430,150)"/>
     <wire from="(250,220)" to="(260,220)"/>
@@ -167,88 +172,50 @@
     <wire from="(100,590)" to="(110,590)"/>
     <wire from="(20,100)" to="(20,220)"/>
     <wire from="(610,100)" to="(610,150)"/>
-    <comp lib="0" loc="(50,410)" name="Clock">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(546,473)" name="Text">
-      <a name="text" val="There should be no blue/red wires here, and the result shouldn't be x's."/>
-    </comp>
-    <comp lib="4" loc="(250,400)" name="ROM">
-      <a name="dataWidth" val="4"/>
-      <a name="contents">addr/data: 8 4
-3 3 3 4 0 4 d
-</a>
-    </comp>
-    <comp lib="0" loc="(260,400)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="A2"/>
-    </comp>
-    <comp lib="3" loc="(260,120)" name="Comparator">
-      <a name="mode" val="unsigned"/>
-    </comp>
-    <comp lib="0" loc="(260,590)" name="Tunnel">
-      <a name="label" val="WE3"/>
-    </comp>
-    <comp lib="4" loc="(250,220)" name="ROM">
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 8 32
-0 bad00dad feedf00d 12345678 10101010 dadadada babababa
-</a>
-    </comp>
-    <comp lib="0" loc="(90,130)" name="Constant">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(660,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Read Data 2"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,230)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="A2"/>
-    </comp>
-    <comp lib="3" loc="(140,140)" name="Adder"/>
-    <comp lib="0" loc="(30,230)" name="Constant"/>
-    <comp lib="4" loc="(250,310)" name="ROM">
-      <a name="dataWidth" val="4"/>
-      <a name="contents">addr/data: 8 4
-3 3 3 2 0 2 4
-</a>
-    </comp>
-    <comp lib="0" loc="(450,350)" name="Tunnel">
-      <a name="label" val="WE3"/>
-    </comp>
-    <comp lib="4" loc="(70,220)" name="Register"/>
-    <comp lib="0" loc="(420,270)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="WriteData"/>
-    </comp>
-    <comp lib="6" loc="(86,301)" name="Text">
-      <a name="text" val="A1"/>
-    </comp>
-    <comp lib="7" loc="(530,240)" name="main"/>
-    <comp lib="0" loc="(430,100)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Reg 1 Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
     <comp lib="4" loc="(250,490)" name="ROM">
       <a name="dataWidth" val="4"/>
       <a name="contents">addr/data: 8 4
 4*3 4 3 1
 </a>
     </comp>
-    <comp lib="0" loc="(430,250)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="A3"/>
+    <comp lib="0" loc="(30,230)" name="Constant"/>
+    <comp lib="6" loc="(546,473)" name="Text">
+      <a name="text" val="There should be no blue/red wires here, and the result shouldn't be x's."/>
     </comp>
-    <comp lib="6" loc="(87,386)" name="Text">
-      <a name="text" val="A2"/>
+    <comp lib="0" loc="(270,120)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="halt"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(50,410)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(260,310)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="6" loc="(76,587)" name="Text">
+      <a name="text" val="WE3"/>
+    </comp>
+    <comp lib="0" loc="(260,220)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="WriteData"/>
+    </comp>
+    <comp lib="3" loc="(140,140)" name="Adder"/>
+    <comp lib="0" loc="(610,100)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Reg 3 Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(260,590)" name="Tunnel">
+      <a name="label" val="WE3"/>
+    </comp>
+    <comp lib="0" loc="(210,110)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x7"/>
     </comp>
     <comp lib="0" loc="(660,200)" name="Pin">
       <a name="facing" val="west"/>
@@ -257,35 +224,75 @@
       <a name="label" val="Read Data 1"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(250,590)" name="ROM">
-      <a name="dataWidth" val="1"/>
-      <a name="contents">addr/data: 8 1
-0 1 0 0 1
-</a>
+    <comp lib="0" loc="(420,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="WriteData"/>
     </comp>
-    <comp lib="0" loc="(270,120)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="halt"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(260,490)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="A3"/>
     </comp>
-    <comp lib="0" loc="(260,310)" name="Tunnel">
+    <comp lib="6" loc="(87,386)" name="Text">
+      <a name="text" val="A2"/>
+    </comp>
+    <comp lib="0" loc="(420,210)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="4"/>
       <a name="label" val="A1"/>
     </comp>
-    <comp lib="0" loc="(180,90)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(660,290)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="test #"/>
-      <a name="labelloc" val="north"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Read Data 2"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(610,100)" name="Pin">
+    <comp lib="0" loc="(420,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="A2"/>
+    </comp>
+    <comp lib="4" loc="(250,220)" name="ROM">
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 8 32
+0 bad00dad feedf00d 12345678 10101010 dadadada babababa
+</a>
+    </comp>
+    <comp lib="0" loc="(470,330)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="WE3"/>
+    </comp>
+    <comp lib="3" loc="(260,120)" name="Comparator">
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(430,100)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="Reg 3 Value"/>
+      <a name="label" val="Reg 1 Value"/>
       <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(250,400)" name="ROM">
+      <a name="dataWidth" val="4"/>
+      <a name="contents">addr/data: 8 4
+3 3 3 4 0 4 d
+</a>
+    </comp>
+    <comp lib="7" loc="(530,240)" name="main"/>
+    <comp lib="0" loc="(520,100)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Reg 2 Value"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(90,130)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(260,400)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(700,100)" name="Pin">
       <a name="facing" val="south"/>
@@ -294,19 +301,36 @@
       <a name="label" val="Reg 4 Value"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(210,110)" name="Constant">
-      <a name="width" val="8"/>
-      <a name="value" val="0x7"/>
-    </comp>
-    <comp lib="6" loc="(76,587)" name="Text">
-      <a name="text" val="WE3"/>
-    </comp>
+    <comp lib="4" loc="(70,220)" name="Register"/>
     <comp lib="6" loc="(86,470)" name="Text">
       <a name="text" val="A3"/>
     </comp>
-    <comp lib="0" loc="(260,490)" name="Tunnel">
+    <comp lib="6" loc="(86,301)" name="Text">
+      <a name="text" val="A1"/>
+    </comp>
+    <comp lib="0" loc="(180,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="test #"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(250,310)" name="ROM">
+      <a name="dataWidth" val="4"/>
+      <a name="contents">addr/data: 8 4
+3 3 3 2 0 2 4
+</a>
+    </comp>
+    <comp lib="0" loc="(420,250)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="4"/>
       <a name="label" val="A3"/>
+    </comp>
+    <comp lib="4" loc="(250,590)" name="ROM">
+      <a name="dataWidth" val="1"/>
+      <a name="contents">addr/data: 8 1
+0 1 0 0 1
+</a>
     </comp>
     <comp lib="0" loc="(340,100)" name="Pin">
       <a name="facing" val="south"/>
@@ -314,21 +338,6 @@
       <a name="width" val="32"/>
       <a name="label" val="Reg 0 Value"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(520,100)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="Reg 2 Value"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(430,210)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="A1"/>
-    </comp>
-    <comp lib="0" loc="(260,220)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="WriteData"/>
     </comp>
   </circuit>
 </project>
