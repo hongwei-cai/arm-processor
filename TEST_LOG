@@ -4,45 +4,9 @@ Testing files...
 	PASSED test: MOV ADD imm test
 	PASSED test: MOV SUB register test
 	PASSED test: MOV SUB imm test
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	0	0	e3a00001
-1	0	0	0	0	1	4	e1a01180
-1	0	0	0	0	1	4	e1a01180
-1	2	0	0	0	2	8	e3a00004
-1	8	0	0	0	2	8	e3a00004
-4	2	0	0	0	3	c	e1a02380
-4	8	0	0	0	3	c	e1a02380
-4	2	40	0	0	4	10	0
-4	8	200	0	0	4	10	0
-	FAILED test: MOV LSL test (Did not match expected output (check ./mov-lsl.circ, also check test.py if this is a test you wrote))
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00001
-0	0	0	0	0	0	0	e3a00080
-1	0	0	0	0	1	4	e1a01020
-80	0	0	0	0	1	4	e1a011a0
-1	0	0	0	0	2	8	e3e00003
-80	10	0	0	0	2	8	e3a00008
-fffffffe	0	0	0	0	3	c	e1a020a0
-8	10	0	0	0	3	c	e1a02220
-fffffffe	0	3	0	0	4	10	0
-8	10	0	0	0	4	10	0
-	FAILED test: MOV LSR test (Did not match expected output (check ./mov-lsr.circ, also check test.py if this is a test you wrote))
-Format is student then expected
-R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	Instruction
-0	0	0	0	0	0	0	e3a00080
-0	0	0	0	0	0	0	e3a00080
-80	0	0	0	0	1	4	e1a01140
-80	0	0	0	0	1	4	e1a01140
-80	80	0	0	0	2	8	e3a00040
-80	20	0	0	0	2	8	e3a00040
-40	80	0	0	0	3	c	e1a021c0
-40	20	0	0	0	3	c	e1a021c0
-40	80	40	0	0	4	10	0
-40	20	8	0	0	4	10	0
-	FAILED test: MOV ASR test (Did not match expected output (check ./mov-asr.circ, also check test.py if this is a test you wrote))
+	PASSED test: MOV LSL test
+	PASSED test: MOV LSR test
+	PASSED test: MOV ASR test
 	PASSED test: MOV AND imm test
 	PASSED test: MOV ORR imm test
 	PASSED test: MOV EOR imm test
@@ -55,4 +19,4 @@ R0 Value	R1 Value	R2 Value	LR (R14) Value	SP (R13) Value	Time Step	Fetch Addr	In
 	PASSED test: B backward test
 	PASSED test: Load Register test
 	PASSED test: Store Register test
-Passed 17/20 tests
+Passed 20/20 tests
